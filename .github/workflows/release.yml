@@ -127,7 +127,7 @@ jobs:
           set -Eeuo pipefail
           version="${RELEASE_TAG#v}"
           project="${GITHUB_REPOSITORY##*/}"
-          bash ci/generate-manifest.sh \
+          bash ci/manifest.sh \
             "${project}" \
             "${version}" \
             router-c \
@@ -216,7 +216,7 @@ jobs:
             <(printf '%s\n' "${actual[@]}")
           version="${RELEASE_TAG#v}"
           project="${GITHUB_REPOSITORY##*/}"
-          bash ci/generate-manifest.sh \
+          bash ci/manifest.sh \
             "${project}" \
             "${version}" \
             router-c \
